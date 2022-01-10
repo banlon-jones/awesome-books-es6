@@ -37,14 +37,14 @@ if (localStorage.getItem('books')) {
   books = JSON.parse(localStorage.getItem('books'));
 }
 
-function removeBook(id) {
+const removeBook = ( id ) => {
   books = books.filter((item) => (
     Number(id) !== item.id
   ));
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function display() {
+const display = () => {
   bookList.innerHTML = '';
   books.forEach((item) => {
     const book = new Book(item.id, item.name, item.author);
@@ -65,7 +65,7 @@ function display() {
 
 display();
 
-function addBook(name, author) {
+const addBook = (name, author) => {
   const id = Date.now();
   books.push({ name, author, id });
   localStorage.setItem('books', JSON.stringify(books));
