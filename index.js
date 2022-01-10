@@ -1,5 +1,5 @@
 import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
-import { displayAddBookSection, displayContactSection, displayListBooks } from '../awesome-part2/modules/display.js';
+import { displayAddBookSection, displayContactSection, displayListBooks } from './modules/display.js';
 import Book from './modules/Book.js';
 
 const date = document.querySelector('.date');
