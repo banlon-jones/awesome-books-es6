@@ -37,12 +37,12 @@ if (localStorage.getItem('books')) {
   books = JSON.parse(localStorage.getItem('books'));
 }
 
-const removeBook = ( id ) => {
+const removeBook = (id) => {
   books = books.filter((item) => (
     Number(id) !== item.id
   ));
   localStorage.setItem('books', JSON.stringify(books));
-}
+};
 
 const display = () => {
   bookList.innerHTML = '';
@@ -61,7 +61,7 @@ const display = () => {
       display();
     });
   });
-}
+};
 
 display();
 
@@ -70,7 +70,7 @@ const addBook = (name, author) => {
   books.push({ name, author, id });
   localStorage.setItem('books', JSON.stringify(books));
   display();
-}
+};
 
 add.addEventListener('click', (e) => {
   e.preventDefault();
