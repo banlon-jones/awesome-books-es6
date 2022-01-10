@@ -1,6 +1,6 @@
-import { DateTime } from '../awesome-part2/node_modules/luxon/build/es6/luxon.js';
+import { DateTime } from '../awesome-books-es6/node_modules/luxon/build/es6/luxon.js';
 import { displayAddBookSection, displayContactSection, displayListBooks } from '../awesome-part2/modules/display.js';
-import Book from '../awesome-part2/modules/Book.js';
+import Book from '../awesome-books-es6/modules/Book.js';
 
 const date = document.querySelector('.date');
 const dt = DateTime.now();
