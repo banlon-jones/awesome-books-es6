@@ -1,6 +1,6 @@
-import { DateTime } from '../awesome-books-es6/node_modules/luxon/build/es6/luxon.js';
+import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 import { displayAddBookSection, displayContactSection, displayListBooks } from '../awesome-part2/modules/display.js';
-import Book from '../awesome-books-es6/modules/Book.js';
+import Book from './modules/Book.js';
 
 const date = document.querySelector('.date');
 const dt = DateTime.now();
@@ -22,17 +22,15 @@ listLink.addEventListener('click', (e) => {
   displayListBooks();
 });
 
-
 contactLink.addEventListener('click', (e) => {
   e.preventDefault();
   displayContactSection();
-
 });
 
 addLink.addEventListener('click', (e) => {
   e.preventDefault();
   displayAddBookSection();
-})
+});
 
 // displaying books in localStorage
 if (localStorage.getItem('books')) {
